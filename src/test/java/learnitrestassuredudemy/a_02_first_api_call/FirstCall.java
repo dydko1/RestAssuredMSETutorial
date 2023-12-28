@@ -20,9 +20,8 @@ public class FirstCall {
                 .log().all()
                 .baseUri("https://google.com")
                 .get()
-                //.prettyPeek()
+                .prettyPeek()
                 .then()
                 .statusCode(HttpStatus.SC_OK);
-        System.out.println("ddddddddddddd=" + HttpStatus.SC_ACCEPTED);
     }
 }
