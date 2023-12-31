@@ -14,7 +14,7 @@ import java.util.Map;
 import static learnitrestassuredudemy.f_10_parametrized.consts.BoardsEndpoints.*;
 import static learnitrestassuredudemy.f_10_parametrized.consts.UrlParamValues.PATH_MEMBER_PARAMS;
 
-public class CreateBoard extends BaseTest_F_10 {
+public class CreateBoardF10 extends BaseTest_F_10 {
 
     private String createdBoardId;
 

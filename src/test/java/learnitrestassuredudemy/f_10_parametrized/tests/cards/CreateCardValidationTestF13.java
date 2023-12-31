@@ -2,10 +2,8 @@ package learnitrestassuredudemy.f_10_parametrized.tests.cards;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import learnitrestassuredudemy.f_10_parametrized.arguments.holders.AuthValidationArgumentsHolder;
 import learnitrestassuredudemy.f_10_parametrized.arguments.holders.AuthValidationArgumentsHolder1;
 import learnitrestassuredudemy.f_10_parametrized.arguments.holders.CardBodyValidationArgumentsHolder;
-import learnitrestassuredudemy.f_10_parametrized.arguments.providers.AuthValidationArgumentsProvider;
 import learnitrestassuredudemy.f_10_parametrized.arguments.providers.AuthValidationArgumentsProvider1;
 import learnitrestassuredudemy.f_10_parametrized.arguments.providers.CardBodyValidationArgumentsProvider;
 import learnitrestassuredudemy.f_10_parametrized.tests.BaseTest_F_10;
@@ -21,7 +19,7 @@ import static learnitrestassuredudemy.f_10_parametrized.consts.BoardsEndpoints.C
 import static learnitrestassuredudemy.f_10_parametrized.consts.UrlParamValues.ANOTHER_USER_AUTH_QUERY_PARAMS;
 import static learnitrestassuredudemy.f_10_parametrized.consts.UrlParamValues.EXISTING_LIST_ID;
 
-public class CreateCardValidationTest extends BaseTest_F_10 {
+public class CreateCardValidationTestF13 extends BaseTest_F_10 {
     @ParameterizedTest
     @ArgumentsSource(CardBodyValidationArgumentsProvider.class)
     public void checkCreateCardWithInvalidName(CardBodyValidationArgumentsHolder validationArguments) {
