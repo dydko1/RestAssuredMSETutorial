@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class TC_001 {
 
-    String studentEndPoint = "https://thetestingworldapi.com/api/studentsdetails/10278537";
+    String studentEndPoint = "https://thetestingworldapi.com/api/studentsdetails/10279463";
 
     @Test
     public void validateStudentGetData() {
@@ -15,6 +15,6 @@ public class TC_001 {
         //System.out.println(response.getHeaders());
         System.out.println(response.asString());
         System.out.println(response.asPrettyString());
-        System.out.println(response.cookies());
+        //System.out.println(response.cookies());
     }
 }
