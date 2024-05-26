@@ -5,7 +5,6 @@ import static org.apache.http.HttpStatus.SC_CREATED;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 
 public class TC_009_POST_BDD1 {
