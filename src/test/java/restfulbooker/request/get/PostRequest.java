@@ -76,7 +76,7 @@ public class PostRequest {
                 .basePath("/{basePath}/{bookingid}");
         requestSpecification
                 .pathParams("basePath", "booking")
-                .pathParam("bookingid", 1545);
+                .pathParam("bookingid", 20);
         requestSpecification
                 .get()
                 .prettyPrint();
