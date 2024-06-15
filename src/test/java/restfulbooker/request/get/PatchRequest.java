@@ -34,5 +34,9 @@ public class PatchRequest {
                 .jsonPath()
                 .get("lastname");
         System.out.println(s);
+        Object s2 = response
+                .jsonPath()
+                .get("bookingdates.checkin");
+        System.out.println("s2: " + s2);
     }
 }
