@@ -1,4 +1,4 @@
-package trees;
+package trees.tree1;
 
 public class TreeDataStructure {
     Node root = null;

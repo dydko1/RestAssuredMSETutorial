@@ -1,4 +1,4 @@
-package trees;
+package trees.tree1;
 
 public class Main123 {
     public static void main(String[] args) {

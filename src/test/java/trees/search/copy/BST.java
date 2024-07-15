@@ -1,4 +1,4 @@
-package trees.search;
+package trees.search.copy;
 
 import java.util.Scanner;
 

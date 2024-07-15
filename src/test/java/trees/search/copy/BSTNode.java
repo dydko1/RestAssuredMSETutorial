@@ -1,4 +1,4 @@
-package trees.search;
+package trees.search.copy;
 
 class BSTNode {
     BSTNode left, right;
