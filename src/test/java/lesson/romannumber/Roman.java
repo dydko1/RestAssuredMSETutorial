@@ -2,7 +2,6 @@ package lesson.romannumber;
 
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
 import java.util.Map;
 
 public class Roman {
@@ -26,9 +25,19 @@ public class Roman {
 
     private Integer getNumber() {
         Integer sum = 0;
-        for (int i = 0; i < ROMAN_NUMBER.length(); i++) {
-            sum += romanNumbers.get(String.valueOf(ROMAN_NUMBER.charAt(i)));
+        char[] romanChar = ROMAN_NUMBER.toCharArray();
+        for (char c : romanChar) {
+            sum += romanNumbers.get(Character.toString(c));
         }
+
         return sum;
     }
+
+//    private Integer getNumber() {
+//        Integer sum = 0;
+//        for (int i = 0; i < ROMAN_NUMBER.length(); i++) {
+//            sum += romanNumbers.get(String.valueOf(ROMAN_NUMBER.charAt(i)));
+//        }
+//        return sum;
+//    }
 }
