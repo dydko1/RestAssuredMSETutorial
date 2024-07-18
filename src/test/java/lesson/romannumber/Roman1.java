@@ -12,16 +12,16 @@ public class Roman1 {
     }
 
     private Integer getNumber() {
-        Integer sum=0;
+        Integer sum = 0;
         char[] romanChar = ROMAN_NUMBER.toCharArray();
         for (char c : romanChar) {
-            sum += getNumber(c);
+            sum += geConvertedNumber(c);
         }
 
         return sum;
     }
 
-    private Integer getNumber(char c) {
+    private Integer geConvertedNumber(char c) {
         return switch (Character.toString(c)) {
             case "I" -> 1;
             case "V" -> 5;
