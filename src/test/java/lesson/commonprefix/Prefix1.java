@@ -3,7 +3,7 @@ package lesson.commonprefix;
 import org.testng.annotations.Test;
 
 public class Prefix1 {
-    String[] prefix = {"zmirrosghhkjgk", "mirro", "mirrosfsdfdsf", "mirrot23"};
+    String[] prefix = {"mirrosghhkjgk", "mirro", "mirrosfsdfdsf", "mirrot23"};
 
     @Test
     public void test() {
@@ -16,7 +16,7 @@ public class Prefix1 {
         String output = "Prefix does not exist!";
 
         for (int i = 0; i < minTextLength; i++) {
-            for (int j = 0; j < nPrefixElements - 1; j++) {
+            for (int j = 0; j < nPrefixElements; j++) {
                 if (prefix[j].charAt(i) != prefix[nPrefixElements - 1].charAt(i)) {
                     return output;
                 }
