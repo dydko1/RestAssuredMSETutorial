@@ -16,7 +16,7 @@ public class Prefix1 {
         String output = "Prefix does not exist!";
 
         for (int i = 0; i < minTextLength; i++) {
-            for (int j = 0; j < nPrefixElements; j++) {
+            for (int j = 0; j < nPrefixElements; j++) { //tu coś zle robione na kacu
                 if (prefix[j].charAt(i) != prefix[nPrefixElements - 1].charAt(i)) {
                     return output;
                 }
