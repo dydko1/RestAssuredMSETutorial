@@ -1,9 +1,9 @@
-package geeksforgeeks;
+package geeksforgeeks.older;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static geeksforgeeks.ListOfLists2.iterateUsingIterators;
+import static geeksforgeeks.older.ListOfLists2.iterateUsingIterators;
 
 public class MainListOfList2 {
     public static void main(String[] args) {

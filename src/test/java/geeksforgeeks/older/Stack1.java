@@ -1,4 +1,4 @@
-package geeksforgeeks;
+package geeksforgeeks.older;
 
 import java.util.Iterator;
 import java.util.Stack;
