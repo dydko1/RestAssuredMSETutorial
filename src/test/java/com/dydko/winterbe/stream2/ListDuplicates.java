@@ -3,7 +3,6 @@ package com.dydko.winterbe.stream2;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ListDuplicates {
