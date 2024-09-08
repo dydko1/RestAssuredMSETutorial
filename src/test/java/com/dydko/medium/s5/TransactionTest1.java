@@ -27,8 +27,20 @@ public class TransactionTest1 {
 
     @Test
     public void test2() {
-        //Example 1: Summing the Elements
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        int sum = numbers
+                .stream()
+                .reduce(0, (s1, s2) -> s1 + s2);
+        System.out.println(sum);
+    }
 
+    @Test
+    public void test3() {
+        List<String> words = Arrays.asList("Hello", " ", "World", "!");
+
+        String concatenated=words
+                .stream()
+                .reduce("",String::concat);
+        System.out.println(concatenated);
     }
 }
