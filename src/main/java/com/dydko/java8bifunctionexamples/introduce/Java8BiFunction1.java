@@ -1,4 +1,4 @@
-package com.dydko.java8bifunctionexamples;
+package com.dydko.java8bifunctionexamples.introduce;
 
 import java.util.Arrays;
 import java.util.List;
