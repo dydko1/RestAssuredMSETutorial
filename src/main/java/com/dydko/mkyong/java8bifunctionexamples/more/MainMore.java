@@ -22,6 +22,15 @@ public class MainMore {
         });
         System.out.println(result1);
 
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+        List<Integer> result3 = mainMore.filterList(numbers, 2, (l1, con) -> {
+            if (l1 % con == 0)
+                return l1;
+            else {
+                return null;
+            }
+        });
+        System.out.println(result3);
     }
 
     public String filterByLength(String str, Integer size) {
