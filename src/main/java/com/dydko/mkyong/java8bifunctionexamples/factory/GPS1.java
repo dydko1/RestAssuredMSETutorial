@@ -1,4 +1,4 @@
-package com.dydko.java8bifunctionexamples.factory;
+package com.dydko.mkyong.java8bifunctionexamples.factory;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
