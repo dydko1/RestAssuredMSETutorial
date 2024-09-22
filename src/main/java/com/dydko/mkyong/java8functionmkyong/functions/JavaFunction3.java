@@ -1,4 +1,4 @@
-package com.dydko.mkyong.java8bifunctionexamples.functions;
+package com.dydko.mkyong.java8functionmkyong.functions;
 
 import java.util.Arrays;
 import java.util.HashMap;

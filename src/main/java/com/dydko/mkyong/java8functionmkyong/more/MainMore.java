@@ -1,4 +1,4 @@
-package com.dydko.mkyong.java8bifunctionexamples.more;
+package com.dydko.mkyong.java8functionmkyong.more;
 
 import java.util.ArrayList;
 import java.util.Arrays;

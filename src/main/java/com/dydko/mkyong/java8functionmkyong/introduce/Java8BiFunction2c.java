@@ -1,4 +1,4 @@
-package com.dydko.mkyong.java8bifunctionexamples.introduce;
+package com.dydko.mkyong.java8functionmkyong.introduce;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
