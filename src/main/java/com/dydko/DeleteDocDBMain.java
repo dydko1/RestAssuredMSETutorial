@@ -4,9 +4,7 @@ import com.mongodb.client.*;
 import com.mongodb.client.model.Filters;
 import org.bson.Document;
 
-import java.util.Iterator;
-
-public class DeletDocDBMain {
+public class DeleteDocDBMain {
     public static void main(String[] args) {
 
         MongoClient mongoClient = MongoClients.create("mongodb://192.168.10.61:27017/");
