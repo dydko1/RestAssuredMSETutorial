@@ -1,9 +1,8 @@
-package com.dydko.iterator;
+package com.dydko.collection;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Queue1 {
 

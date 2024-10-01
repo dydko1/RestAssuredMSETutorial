@@ -1,35 +1,54 @@
-package com.dydko.generic;
+package com.dydko.generic.gm4;
 
 import org.junit.jupiter.api.Test;
 
-public class GenericDemo3<T> {
+import java.util.ArrayList;
+import java.util.List;
 
-    private T t;
-
-//    public GenericDemo3(T t) {
-//        this.t = t;
-//    }
-
-    public T getT() {
-        return t;
-    }
-
-    public void setT(T t) {
-        this.t = t;
-    }
+public class GenericDemo4 {
 
     @Test
     public void genericDemo2() {
-        GenericDemo3<Integer> integerGenericDemo3 = new GenericDemo3<>();
-        GenericDemo3<String> stringGenericDemo3 = new GenericDemo3<>();
+        List<Child> children = new ArrayList<>();
 
-        integerGenericDemo3.setT(10);
-        stringGenericDemo3.setT("ten");
+//		processParentElements(children); // compilation error
 
-        Integer int1 = integerGenericDemo3.getT();
-        String string1 = stringGenericDemo3.getT();
+        //processElements(children);
 
-        System.out.printf("Integer val: %d\n\n%s", int1,"----------");
-        System.out.printf("String val: %s\n", string1);
+        //Child child = children.get(0);
+        //child.childSpecificMethod();
+
+        List<Parent> parents = new ArrayList<>();
+        List<Child> children2 = new ArrayList<>();
+        //processElements2(parents);
+        //processElements2(children2);
+
+        List<Grandchild> grandChildren = new ArrayList<>();
+//		processElements2(grandChildren); // compilation error
+
+        //Child child2 = children.get(0);
+        //child.childSpecificMethod();
+
     }
+
+    private void processParentElements(List<Parent> parents) {
+    }
+
+    private void processElements(List<? extends Parent> elements) {
+        Parent parent = elements.get(0);
+        elements.add(null);
+    }
+
+    public static void processElements2(List<? super Child> elements) {
+        Object element = elements.get(0);
+//		Child parentElement = elements.get(0); // compilation error
+
+        elements.add(new Child());
+        elements.add(new Grandchild());
+        elements.add(null);
+
+//		elements.add(new Parent());
+//		elements.add(new Object());
+    }
+
 }

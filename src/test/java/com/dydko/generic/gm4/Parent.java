@@ -1,4 +1,4 @@
-package com.dydko.generic;
+package com.dydko.generic.gm4;
 
 public class Parent {
 }

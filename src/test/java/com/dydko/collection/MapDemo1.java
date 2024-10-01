@@ -1,11 +1,9 @@
-package com.dydko.iterator;
+package com.dydko.collection;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Queue;
 
 public class MapDemo1 {
 

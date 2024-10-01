@@ -1,9 +1,7 @@
-package com.dydko.iterator;
+package com.dydko.collection;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 
