@@ -1,26 +1,15 @@
-package com.dydko.gorest;
+package com.dydko.gorest.test1;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
-class GoRestCrudTest {
-
-    private static final String TOKEN = "0e1fcc0384b6c4090abb387e10ca3d4a0c94b5a3d0c62279944c020a80efbaaa";
-
-    @BeforeAll
-    static void setup() {
-        RestAssured.baseURI = "https://gorest.co.in/public/v2";
-    }
+class GoRestCrudTest extends GoRestBaseTest {
 
     @Test
     void shouldCreateGetAndDeleteUser() {
-        // 1) CREATE (POST /users)
         String uniqueEmail = "mirek." + System.currentTimeMillis() + "@example.com";
 
         String requestBody = """
@@ -47,9 +36,6 @@ class GoRestCrudTest {
         Integer userId = createResponse.jsonPath().getInt("id");
         assertNotNull(userId);
 
-        System.out.println("Created user id = " + userId);
-
-        // 2) GET /users/{id}
         Response getResponse = given()
                 .header("Authorization", "Bearer " + TOKEN)
                 .when()
@@ -63,7 +49,6 @@ class GoRestCrudTest {
         assertEquals("Mirek Test", getResponse.jsonPath().getString("name"));
         assertEquals(uniqueEmail, getResponse.jsonPath().getString("email"));
 
-        // 3) DELETE /users/{id}
         given()
                 .header("Authorization", "Bearer " + TOKEN)
                 .when()
