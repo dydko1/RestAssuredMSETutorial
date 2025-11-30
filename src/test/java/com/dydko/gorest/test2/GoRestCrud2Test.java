@@ -8,9 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-class GoRestCrudTest {
+class GoRestCrud2Test {
 
     private static GoRestClient goRest;  // <- KOMPOZYCJA: test "ma" klienta
 
@@ -24,12 +25,12 @@ class GoRestCrudTest {
     void shouldCreateGetAndDeleteUser() {
         String uniqueEmail = "mirek." + System.currentTimeMillis() + "@example.com";
 
-        Map<String, Object> requestBody = new HashMap<>();
-        requestBody.put("name", "Mirek Test");
-        requestBody.put("email", uniqueEmail);
-        requestBody.put("gender", "male");
-        requestBody.put("status", "active");
-
+        User requestBody = User.builder()
+                .name("Mirek Test")
+                .email(uniqueEmail)
+                .gender("male")
+                .status("active")
+                .build();
 
         // CREATE
         Response createResponse = given()
